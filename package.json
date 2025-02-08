@@ -1,0 +1,22 @@
+{
+  "name": "sonrisys-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon --exec 'node --env-file=.env' index.js",
+    "start": "node --env-file=.env index.js"
+  },
+  "keywords": [],
+  "author": "pickless",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "mongoose": "^8.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
