@@ -37,4 +37,6 @@ authRoute.post(
     loginController.resetPassword
 );
 
+authRoute.get("/me", loginController.getAuthenticatedUser);
+
 export default authRoute;

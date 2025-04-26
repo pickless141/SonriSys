@@ -23,4 +23,14 @@ usuarioRoute.get("/perfil", verificarToken, (req, res) => {
     res.json({mensaje: "Acceso Autorizado", usuario: req.usuario})
 })
 
+usuarioRoute.get("/", verificarToken, usuarioController.obtenerUsuarios);
+
+usuarioRoute.put("/:id", verificarToken, usuarioController.actualizarUsuario);
+
+usuarioRoute.patch("/:id/reset", verificarToken, usuarioController.resetearIntentos);
+
+usuarioRoute.patch("/:id/estado", verificarToken, usuarioController.bloquearUsuario);
+
+usuarioRoute.delete("/:id", verificarToken, usuarioController.eliminarUsuario);
+
 export default usuarioRoute
